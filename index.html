@@ -3,82 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Observador Incómodo</title>
-  <meta name="description" content="Sitio oficial de El Observador Incómodo. Archivos recuperados, publicaciones y observaciones de la vida corporativa." />
+  <title>El Observador Incómodo | Archivo Central</title>
+  <meta name="description" content="Sitio oficial de El Observador Incómodo. No es un libro de liderazgo. Es un espejo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="access-screen">
-    <div class="stamp">ACCESO AUTORIZADO</div>
-    <p>Autenticando archivo...</p>
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-panel">
+      <p class="mono" id="bootText">Accediendo al Archivo Central...</p>
+      <div class="boot-line"></div>
+      <div class="stamp stamp-red">CLASIFICADO</div>
+    </div>
   </div>
 
-  <header class="topbar">
-    <div class="brand">
-      <div class="eye">◉</div>
-      <div>
-        <strong>EL OBSERVADOR</strong>
-        <strong>INCÓMODO</strong>
-      </div>
-    </div>
-    <nav>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark"><span></span></span>
+      <span>El Observador<br>Incómodo</span>
+    </a>
+    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <nav id="nav">
       <a href="#expedientes">Expedientes</a>
-      <a href="#publicaciones">Publicaciones</a>
-      <a href="#observador">El Observador</a>
+      <a href="#sujetos">Personas de interés</a>
+      <a href="#evidencias">Evidencias</a>
+      <a href="#autor">El Observador</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <main>
+  <main id="inicio">
     <section class="hero">
-      <div class="seal">ARCHIVO CENTRAL<br><span>CONFIDENCIAL</span></div>
-      <div class="hero-content">
-        <h1>EL OBSERVADOR<br>INCÓMODO</h1>
+      <div class="orb" aria-hidden="true">
+        <span>Archivo Central</span>
+        <strong>Confidencial</strong>
+      </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Expediente editorial / acceso restringido</p>
+        <h1>El<br>Observador<br>Incómodo</h1>
         <p class="tagline">No es un libro de liderazgo.<br>Es un espejo.</p>
-        <a class="button" href="#publicaciones">Entrar al archivo</a>
-        <p class="small">Observamos lo que muchos callan. Documentamos lo que todos viven.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#expedientes">Entrar al archivo</a>
+          <a class="btn ghost" href="#evidencias">Ver evidencias</a>
+        </div>
+        <p class="note">Observamos lo que muchos callan. Documentamos lo que todos viven.</p>
       </div>
     </section>
 
-    <section class="grid-section">
-      <article id="publicaciones" class="paper-card">
-        <span class="label">PUBLICACIONES</span>
-        <h2>¿Cómo ser mamón sin dejar de ser profesional?</h2>
-        <p>Manual satírico del liderazgo y la vida corporativa.</p>
-        <a class="button small-button" href="#" target="_blank" rel="noopener">Comprar en Amazon</a>
-        <p class="note">Cuando tengas el enlace de Amazon, lo colocamos aquí.</p>
-      </article>
-
-      <article id="expedientes" class="paper-card dossier">
-        <span class="label">ARCHIVOS RECUPERADOS</span>
-        <h2>Archivo Recuperado #1</h2>
-        <p>Manual para no ser manipulado por un profesional ambicioso.</p>
-        <a class="button small-button" href="bonus.html">Abrir expediente</a>
-        <div class="locked">Archivo Recuperado #2 · Próximamente</div>
-      </article>
-
-      <article id="observador" class="paper-card">
-        <span class="label">EL OBSERVADOR</span>
-        <blockquote>
-          Algunas personas escriben para enseñar.<br>
-          Otras para entretener.<br>
-          Yo escribo para observar aquello que todos vemos... pero pocos se atreven a señalar.
-        </blockquote>
-        <p class="signature">— El Observador Incómodo</p>
-      </article>
+    <section class="intro reveal">
+      <div class="section-label">Informe preliminar</div>
+      <h2>Hay oficinas donde el talento trabaja. Y hay oficinas donde el talento pide permiso para existir.</h2>
+      <p>Este proyecto reúne sátira, reflexión y observación incómoda sobre liderazgo, poder, reuniones, favoritismos y esas pequeñas ceremonias corporativas que todos reconocen, pero pocos se atreven a nombrar.</p>
     </section>
 
-    <section id="contacto" class="contact">
-      <h2>CONTACTO</h2>
-      <p>Para sugerencias, colaboraciones o conferencias:</p>
-      <a href="mailto:contacto@elobservadorincomodo.com">contacto@elobservadorincomodo.com</a>
-      <p class="note">Podemos cambiar este correo si aún no lo vas a usar.</p>
+    <section class="dossiers" id="expedientes">
+      <div class="section-head reveal">
+        <p class="eyebrow">Archivo de casos</p>
+        <h2>Expedientes</h2>
+      </div>
+      <div class="grid cards">
+        <article class="folder reveal">
+          <span>Expediente 001</span>
+          <h3>El experto en todo</h3>
+          <p>Interviene en cualquier tema, incluso cuando el especialista está presente.</p>
+          <b>Acceso: reservado</b>
+        </article>
+        <article class="folder reveal">
+          <span>Expediente 002</span>
+          <h3>El correo con copia para todos</h3>
+          <p>Cuando informar deja de ser suficiente y comienza el teatro de la evidencia.</p>
+          <b>Acceso: confidencial</b>
+        </article>
+        <article class="folder reveal">
+          <span>Expediente 003</span>
+          <h3>La reunión que pudo ser un correo</h3>
+          <p>Sesenta minutos, ocho asistentes y un acuerdo que ya estaba escrito.</p>
+          <b>Acceso: interno</b>
+        </article>
+        <article class="folder reveal">
+          <span>Expediente 004</span>
+          <h3>El síndrome del salvador</h3>
+          <p>Apaga incendios que a veces él mismo ayudó a encender.</p>
+          <b>Acceso: observado</b>
+        </article>
+      </div>
+    </section>
+
+    <section class="subjects" id="sujetos">
+      <div class="section-head reveal">
+        <p class="eyebrow">Perfiles bajo observación</p>
+        <h2>Personas de interés</h2>
+      </div>
+      <div class="subject-list">
+        <article class="subject reveal"><small>Sujeto 01</small><h3>El Todólogo</h3><p>Cree saber más que quien estudió, ejecutó y resolvió el tema.</p><em>Riesgo: alto</em></article>
+        <article class="subject reveal"><small>Sujeto 02</small><h3>El Bombero Corporativo</h3><p>Llega con urgencia, ruido y heroísmo. A veces al incendio que él provocó.</p><em>Riesgo: inflamable</em></article>
+        <article class="subject reveal"><small>Sujeto 03</small><h3>El Lambiscón Ejecutivo</h3><p>No siempre tiene resultados, pero domina el arte de estar cerca de quien decide.</p><em>Riesgo: silencioso</em></article>
+      </div>
+    </section>
+
+    <section class="evidence" id="evidencias">
+      <div class="section-head reveal">
+        <p class="eyebrow">Documentos encontrados</p>
+        <h2>Evidencias</h2>
+      </div>
+      <div class="paper-stack">
+        <blockquote class="paper reveal"><span>Evidencia 014</span>“El talento suele perder contra quien sabe quedar bien.”</blockquote>
+        <blockquote class="paper reveal"><span>Evidencia 021</span>“Quien siempre tiene la respuesta rara vez hace la pregunta correcta.”</blockquote>
+        <blockquote class="paper reveal"><span>Evidencia 048</span>“La reunión terminó sin acuerdos, pero todos sintieron que trabajaron.”</blockquote>
+      </div>
+    </section>
+
+    <section class="manifesto reveal">
+      <p class="eyebrow">Declaración</p>
+      <h2>Esto no acusa a una persona. Retrata un sistema.</h2>
+      <p>El Observador Incómodo no señala nombres. Señala conductas. Porque el verdadero problema rara vez es un villano perfecto; suele ser una cultura que aprendió a disfrazar la comodidad de estrategia.</p>
+    </section>
+
+    <section class="author" id="autor">
+      <div class="file-card reveal">
+        <span class="stamp small">Autor identificado</span>
+        <h2>¿Quién escribe estos expedientes?</h2>
+        <p>Alguien que ha visto juntas eternas, decisiones maquilladas, talentos ignorados y héroes administrativos que llegan tarde, pero con mucha seguridad. Este archivo nace de observar con humor lo que el profesionalismo a veces obliga a callar.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="reveal">
+        <p class="eyebrow">Próxima apertura</p>
+        <h2>Acceso al expediente completo</h2>
+        <p>La versión completa del libro se encuentra en preparación. Mientras tanto, este archivo seguirá incorporando evidencias, perfiles y fragmentos incómodamente familiares.</p>
+        <a class="btn" href="mailto:contacto@elobservadorincomodo.com">Solicitar acceso</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 El Observador Incómodo. Todos los derechos reservados.</p>
-    <p>Documento clasificado · Uso interno solamente</p>
+    <p>© <span id="year"></span> El Observador Incómodo. Archivo en construcción.</p>
   </footer>
 
   <script src="script.js"></script>
